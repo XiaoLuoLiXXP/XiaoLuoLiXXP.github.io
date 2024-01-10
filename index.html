@@ -1,13 +1,32 @@
 <html>
-    <head>
-    </head>
-    <body><audio src="./y2185.wav" id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
 
-        <img src="./R-C.jfif" style="width: 100%;height: 2300px;">
-    </body>
-    <style type="text/css">
-        audio{
-                display: none;
+<head>
+</head>
+
+<body>
+    <audio id="music" src="./y2185.wav" id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
+
+    <img src="./R-C.jfif" style="width: 100%;height: 2300px;">
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            setInterval("toggleSound()", 1);
+        }
+
+        function toggleSound() {
+            var music = document.getElementById("music");//获取ID  
+            if (music.paused) { //判读是否播放  
+                music.paused = false;
+                music.play(); //没有就播放 
             }
-   </style>
+        }
+    </script>
+</body>
+<style type="text/css">
+    audio {
+        display: none;
+    }
+</style>
+
 </html>
